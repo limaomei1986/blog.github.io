@@ -101,10 +101,12 @@
 <meta property="og:site_name" content="Morten&#39;s Blog">
 <meta property="og:description" content="CountDownLatch是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点： 目录  CountDownLatch是什么？ CountDownLatch如何工作？ 在实时系">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-26T12:34:00.275Z">
+<meta property="og:image" content="http://incdn1.b0.upaiyun.com/2015/04/f65cc83b7b4664916fad5d1398a36005.png">
+<meta property="og:updated_time" content="2017-09-26T12:39:13.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CountDownLatch">
 <meta name="twitter:description" content="CountDownLatch是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点： 目录  CountDownLatch是什么？ CountDownLatch如何工作？ 在实时系">
+<meta name="twitter:image" content="http://incdn1.b0.upaiyun.com/2015/04/f65cc83b7b4664916fad5d1398a36005.png">
 
 
 
@@ -340,7 +342,7 @@
 </ul>
 </blockquote>
 <h2 id="CountDownLatch是什么"><a href="#CountDownLatch是什么" class="headerlink" title="CountDownLatch是什么"></a>CountDownLatch是什么</h2><p>CountDownLatch是在Java1.5被引入的，跟它一起被引入的并发工具类还有CyclicBarrier、Semaphore、ConcurrentHashMap和BlockingQueue，它们都存在于java.util.concurrent包下。CountDownLatch这个类能够使一个线程等待其他线程完成各自的工作后再执行。例如，应用程序的主线程希望在负责启动框架服务的线程已经启动所有的框架服务之后再执行。<br>CountDownLatch是通过一个计数器来实现的，计数器的初始值为线程的数量。每当一个线程完成了自己的任务后，计数器的值就会减1。当计数器值到达0时，它表示所有的线程已经完成了任务，然后在闭锁上等待的线程就可以恢复执行任务。</p>
-<p>￼</p>
+<p><img src="http://incdn1.b0.upaiyun.com/2015/04/f65cc83b7b4664916fad5d1398a36005.png" alt=""></p>
 <h2 id="CountDownLatch如何工作"><a href="#CountDownLatch如何工作" class="headerlink" title="CountDownLatch如何工作"></a>CountDownLatch如何工作</h2><p>CountDownLatch.java类中定义的构造函数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Constructs a CountDownLatch initialized with the given count.</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">CountDownLatch</span><span class="params">(<span class="keyword">int</span> count)</span> </span>&#123;...&#125;</div></pre></td></tr></table></figure></p>
 <p>构造器中的<strong>计数值（count）实际上就是闭锁需要等待的线程数量</strong>。这个值只能被设置一次，而且CountDownLatch<strong>没有提供任何机制去重新设置这个计数值</strong>。<br>与CountDownLatch的第一次交互是主线程等待其他线程。主线程必须在启动其他线程后立即调用<strong>CountDownLatch.await()</strong>方法。这样主线程的操作就会在这个方法上阻塞，直到其他线程完成各自的任务。<br>其他N 个线程必须引用闭锁对象，因为他们需要通知CountDownLatch对象，他们已经完成了各自的任务。这种通知机制是通过<strong>CountDownLatch.countDown()</strong>方法来完成的；每调用一次这个方法，在构造函数中初始化的count值就减1。所以当N个线程都调 用了这个方法，count的值等于0，然后主线程就能通过await()方法，恢复执行自己的任务。</p>
 <h2 id="在实时系统中的使用场景"><a href="#在实时系统中的使用场景" class="headerlink" title="在实时系统中的使用场景"></a>在实时系统中的使用场景</h2><p>让我们尝试罗列出在java实时系统中CountDownLatch都有哪些使用场景。我所罗列的都是我所能想到的。如果你有别的可能的使用方法，请在留言里列出来，这样会帮助到大家。</p>
