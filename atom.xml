@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://limaomei1986.github.io/"/>
-  <updated>2017-09-27T05:36:20.181Z</updated>
+  <updated>2017-09-27T07:41:43.726Z</updated>
   <id>https://limaomei1986.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java并发 - CountDownLatch示例</title>
+    <link href="https://limaomei1986.github.io/2017/09/27/Java%E5%B9%B6%E5%8F%91-CountDownLatch%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://limaomei1986.github.io/2017/09/27/Java并发-CountDownLatch示例/</id>
+    <published>2017-09-27T07:40:30.000Z</published>
+    <updated>2017-09-27T07:41:43.726Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你&amp;gt;很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
+    
+      <category term="多线程" scheme="https://limaomei1986.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Java并发之CountDownLatch、CyclicBarrier和Semaphore</title>
@@ -33,35 +62,6 @@
 &lt;hr&gt;
 &lt;p&gt;这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）&lt;/p&gt;
 &lt;h2 id=&quot;CountDownLatch&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
-    
-    
-      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
-    
-      <category term="多线程" scheme="https://limaomei1986.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CountDownLatch</title>
-    <link href="https://limaomei1986.github.io/2017/09/26/CountDownLatch/"/>
-    <id>https://limaomei1986.github.io/2017/09/26/CountDownLatch/</id>
-    <published>2017-09-26T09:26:04.000Z</published>
-    <updated>2017-09-27T02:43:32.638Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：&lt;/p&gt;
-&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;
         
       
     
