@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Morten&#39;s Blog</title>
+  
+  <subtitle>Quick notes</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-09-27T05:36:20.181Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Morten</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java并发之CountDownLatch、CyclicBarrier和Semaphore</title>
+    <link href="http://yoursite.com/2017/09/27/Java%E5%B9%B6%E5%8F%91%E4%B9%8BCountDownLatch%E3%80%81CyclicBarrier%E5%92%8CSemaphore/"/>
+    <id>http://yoursite.com/2017/09/27/Java并发之CountDownLatch、CyclicBarrier和Semaphore/</id>
+    <published>2017-09-27T05:29:05.000Z</published>
+    <updated>2017-09-27T05:36:20.181Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;这次说一下 JUC
+        
+      
+    
+    </summary>
+    
+      <category term="Core Java" scheme="http://yoursite.com/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CountDownLatch</title>
+    <link href="http://yoursite.com/2017/09/26/CountDownLatch/"/>
+    <id>http://yoursite.com/2017/09/26/CountDownLatch/</id>
+    <published>2017-09-26T09:26:04.000Z</published>
+    <updated>2017-09-27T02:43:32.638Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在
+        
+      
+    
+    </summary>
+    
+      <category term="Core Java" scheme="http://yoursite.com/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/09/20/hello-world/"/>
+    <id>http://yoursite.com/2017/09/20/hello-world/</id>
+    <published>2017-09-20T07:58:00.947Z</published>
+    <updated>2017-09-20T07:58:00.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
