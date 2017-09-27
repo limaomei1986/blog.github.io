@@ -31,7 +31,8 @@
         
           &lt;p&gt;CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;这次说一下 JUC
+&lt;p&gt;这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）&lt;/p&gt;
+&lt;h2 id=&quot;CountDownLatch&quot;&gt;&lt;a
         
       
     
@@ -59,7 +60,8 @@
       
         
         
-          &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在
+          &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;
         
       
     
@@ -87,7 +89,7 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a
         
       
     
