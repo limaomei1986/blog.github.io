@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://limaomei1986.github.io/"/>
-  <updated>2017-09-28T01:35:20.126Z</updated>
+  <updated>2017-09-28T02:13:48.516Z</updated>
   <id>https://limaomei1986.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://limaomei1986.github.io/2017/09/27/Java%E5%B9%B6%E5%8F%91-CountDownLatch%E7%A4%BA%E4%BE%8B/"/>
     <id>https://limaomei1986.github.io/2017/09/27/Java并发-CountDownLatch示例/</id>
     <published>2017-09-27T07:40:30.000Z</published>
-    <updated>2017-09-28T01:35:20.126Z</updated>
+    <updated>2017-09-28T02:13:48.516Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你&amp;gt;很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;CountDownLatch&lt;/strong&gt;是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：&lt;/p&gt;
 &lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;CountDownLatch是什么？&lt;/li&gt;
