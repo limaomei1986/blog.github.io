@@ -391,19 +391,17 @@
 
       
         
-          
-          CountDownLatch是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你&gt;很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：
-目录
-
-CountDownLatch是什么？
-CountDownLatch如何工作？
-在实时系统中的应用场景
-应用范例
-常见的面试题
-
-
-CountDownLatch是什么CountDownLatch是在Java1.5被引入的，跟它一起被引入的并发工具类还有CyclicBarrier、
-          ...
+          <p><strong>CountDownLatch</strong>是一个同步工具类，它允许一个或多个线程一直等待，直到其他线程的操作执行完后再执行。在Java并发中，countdownlatch的概念是一个常见的面试题，所以一定要确保你&gt;很好的理解了它。在这篇文章中，将会涉及到在Java并发编程中跟CountDownLatch相关的以下几点：</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><blockquote>
+<ul>
+<li>CountDownLatch是什么？</li>
+<li>CountDownLatch如何工作？</li>
+<li>在实时系统中的应用场景</li>
+<li>应用范例</li>
+<li>常见的面试题</li>
+</ul>
+</blockquote>
+<h2 id="CountDownLatch是什么"><a href="#CountDownLatch是什么" class="headerlink" title="CountDownLatch是什么"></a>CountDownLatch是什么</h2><p>CountDownLatch是在Java1.5被引入的，跟它一起被引入的并发工具类还有CyclicBarrier、Semaphore、ConcurrentHashMap和BlockingQueue，它们都存在于java.util.concurrent包下。CountDownLatch这个类能够使一个线程等待其他线程完成各自的工作后再执行。例如，应用程序的主线程希望在负责启动框架服务的线程已经启动所有的框架服务之后再执行。<br>CountDownLatch是通过一个计数器来实现的，计数器的初始值为线程的数量。每当一个线程完成了自己的任务后，计数器的值就会减1。当计数器值到达0时，它表示所有的线程已经完成了任务，&gt;然后在闭锁上等待的线程就可以恢复执行任务。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/27/Java并发-CountDownLatch示例/#more" rel="contents">
@@ -549,12 +547,11 @@ CountDownLatch是什么CountDownLatch是在Java1.5被引入的，跟它一起被
 
       
         
-          
-          CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。
-
-这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）
-CountDownLatch直译过来就是倒计数(CountDown)门闩(Latch)。倒计数不用说，门闩的意思顾名思义就
-          ...
+          <p>CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。</p>
+<hr>
+<p>这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）</p>
+<h2 id="CountDownLatch"><a href="#CountDownLatch" class="headerlink" title="CountDownLatch"></a>CountDownLatch</h2><p>直译过来就是倒计数(CountDown)门闩(Latch)。倒计数不用说，门闩的意思顾名思义就是阻止前进。在这里就是指 CountDownLatch.await() 方法在倒计数为0之前会阻塞当前线程。</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>CountDownLatch 的作用和 Thread.join() 方法类似，可用于一组线程和另外一组线程的协作。例如，主线程在做一项工作之前需要一系列的准备工作，只有这些准备工作都完成，主线程才能继续它的工作。这些准备工作彼此独立，所以可以并发执行以提高速度。在这个场景下就可以使用 CountDownLatch 协调线程之间的调度了。在直接创建线程的年代（Java 5.0 之前），我们可以使用 Thread.join()。在 JUC 出现后，因为线程池中的线程不能直接被引用，所以就必须使用 CountDownLatch 了。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/27/Java并发之CountDownLatch、CyclicBarrier和Semaphore/#more" rel="contents">
