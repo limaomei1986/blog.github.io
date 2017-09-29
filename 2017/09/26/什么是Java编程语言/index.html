@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Morten&#39;s Blog">
 <meta property="og:description" content="Java是一种通用的计算机编程语言，它是并发的，基于类的，面向对象的，并且被专门设计为具有尽可能少的实现依赖性。它旨在让应用程序开发人员”write once, run anywhere“（WORA），这意味着编译的Java代码可以在支持Java的所有平台上运行，而无需重新编译。例如，您可以在UNIX上编写和编译Java程序，并在Microsoft Windows，Macintosh或UNIX机器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-29T06:29:47.259Z">
+<meta property="og:updated_time" content="2017-09-29T06:39:24.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是Java编程语言？">
 <meta name="twitter:description" content="Java是一种通用的计算机编程语言，它是并发的，基于类的，面向对象的，并且被专门设计为具有尽可能少的实现依赖性。它旨在让应用程序开发人员”write once, run anywhere“（WORA），这意味着编译的Java代码可以在支持Java的所有平台上运行，而无需重新编译。例如，您可以在UNIX上编写和编译Java程序，并在Microsoft Windows，Macintosh或UNIX机器">
@@ -393,7 +393,7 @@
 <p>甲骨文公司是2010年1月27日收购Sun Microsystems之后正式实施Java SE平台的所有者。这个实现是基于Sun的原始实现。 Oracle实现可用于Microsoft Windows，Mac OS X，Linux和Solaris。</p>
 <p>Oracle实现被打包成两个不同的发行版：<strong>Java运行时环境（JRE），其中包含运行Java程序所需的Java SE平台的部分内容，并且适用于最终用户以及Java Development Kit（JDK） 适用于软件开发人员，并且包括开发工具，如Java编译器，Javadoc，Jar和调试器。</strong><br><a id="more"></a><br>Java使用自动垃圾回收器（<a href="https://howtodoinjava.com/core-java/garbage-collection/revisiting-memory-management-and-garbage-collection-mechanisms-in-java/" target="_blank" rel="external">garbage collector</a>）来管理对象生命周期中的内存。程序员确定何时创建对象，并且一旦对象不再使用，Java运行时就负责恢复内存。一旦没有任何引用指向对象，并且对象依然存在，那么无法访问对象占用的内存就有资格被垃圾收集器自动释放。如果程序员的代码持有对不再需要的对象的引用，通常当不再需要的对象存储在仍在使用的容器中时，可能仍然会发生类似于内存泄漏的内容。如果调用不存在对象的方法，则抛出“空指针异常”。垃圾收集可能随时发生。理想情况下，程序空闲时会发生。如果堆上没有足够的可用内存来分配一个新的对象，则保证被触发;这可能导致程序暂停。显式内存管理在Java中是不可能的。</p>
 <p>以“Hello，world！”为例，程序可以用Java编写为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldApplication</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Hello World!"</span>);   <span class="comment">// Prints the string to the console.</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>源文件必须以其包含的公共类命名，并以.java未后缀，例如HelloWorldApplication.java。它必须首先使用Java编译器编译成字节码，生成一个名为HelloWorldApplication.class的文件。只有这样才能执行，或者“启动”。 Java源文件只能包含一个公共类，但它可以包含多个类，而不包括公共访问和任何数量的公共内部类。当源文件包含多个类时，使一个类’public’，并使用该公共类名命名源文件。</p>
+<p>源文件必须以其包含的公共类命名，并以.java未后缀，例如<br>HelloWorldApplication.java。它必须首先使用Java编译器编译成字节码，生成一个名为HelloWorldApplication.class的文件。只有这样才能执行，或者“启动”。 Java源文件只能包含一个公共类，但它可以包含多个类，而不包括公共访问和任何数量的公共内部类。当源文件包含多个类时，使一个类’public’，并使用该公共类名命名源文件。</p>
 <p>我们将在后面的教程中看到有关Java语言其他更多的特性。</p>
 
       
