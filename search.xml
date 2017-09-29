@@ -24,4 +24,15 @@
         <tag>多线程</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[什么是Java编程语言？]]></title>
+    <url>%2F2017%2F09%2F26%2F%E4%BB%80%E4%B9%88%E6%98%AFJava%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%2F</url>
+    <content type="text"><![CDATA[Java是一种通用的计算机编程语言，它是并发的，基于类的，面向对象的，并且被专门设计为具有尽可能少的实现依赖性。它旨在让应用程序开发人员”write once, run anywhere“（WORA），这意味着编译的Java代码可以在支持Java的所有平台上运行，而无需重新编译。例如，您可以在UNIX上编写和编译Java程序，并在Microsoft Windows，Macintosh或UNIX机器上运行它，而不对源代码进行任何修改。WORA是通过将Java程序编译成一个称为字节码的中间语言来实现。字节码与平台无关，可以在运行Java虚拟机（JVM）的每个平台上运行字节码。 Java最初由Sun Microsystems（后被Oracle Corporation收购）的James Gosling开发，并于1995年发布，作为Sun Microsystems Java平台的核心组件。该语言源自C和C ++的大部分语法，但是它的底层操作比其中任何一个都要少。 甲骨文公司是2010年1月27日收购Sun Microsystems之后正式实施Java SE平台的所有者。这个实现是基于Sun的原始实现。 Oracle实现可用于Microsoft Windows，Mac OS X，Linux和Solaris。 Oracle实现被打包成两个不同的发行版：Java运行时环境（JRE），其中包含运行Java程序所需的Java SE平台的部分内容，并且适用于最终用户以及Java Development Kit（JDK） 适用于软件开发人员，并且包括开发工具，如Java编译器，Javadoc，Jar和调试器。 Java使用自动垃圾回收器（garbage collector）来管理对象生命周期中的内存。程序员确定何时创建对象，并且一旦对象不再使用，Java运行时就负责恢复内存。一旦没有任何引用指向对象，并且对象依然存在，那么无法访问对象占用的内存就有资格被垃圾收集器自动释放。如果程序员的代码持有对不再需要的对象的引用，通常当不再需要的对象存储在仍在使用的容器中时，可能仍然会发生类似于内存泄漏的内容。如果调用不存在对象的方法，则抛出“空指针异常”。垃圾收集可能随时发生。理想情况下，程序空闲时会发生。如果堆上没有足够的可用内存来分配一个新的对象，则保证被触发;这可能导致程序暂停。显式内存管理在Java中是不可能的。 以“Hello，world！”为例，程序可以用Java编写为：12345public class HelloWorldApplication &#123; public static void main(String[] args) &#123; System.out.println("Hello World!"); // Prints the string to the console. &#125;&#125; 源文件必须以其包含的公共类命名，并以.java未后缀，例如HelloWorldApplication.java。它必须首先使用Java编译器编译成字节码，生成一个名为HelloWorldApplication.class的文件。只有这样才能执行，或者“启动”。 Java源文件只能包含一个公共类，但它可以包含多个类，而不包括公共访问和任何数量的公共内部类。当源文件包含多个类时，使一个类’public’，并使用该公共类名命名源文件。 我们将在后面的教程中看到有关Java语言其他更多的特性。]]></content>
+      <categories>
+        <category>Core Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
 </search>
