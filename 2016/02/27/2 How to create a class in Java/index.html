@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于初始">
+<meta name="description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块  字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于">
 <meta name="keywords" content="Java,Core Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Java中创建一个类？">
 <meta property="og:url" content="https://limaomei1986.github.io/2016/02/27/2 How to create a class in Java/index.html">
 <meta property="og:site_name" content="Morten&#39;s Blog">
-<meta property="og:description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于初始">
+<meta property="og:description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块  字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-16T05:28:07.155Z">
+<meta property="og:updated_time" content="2017-10-16T05:32:31.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Java中创建一个类？">
-<meta name="twitter:description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于初始">
+<meta name="twitter:description" content="类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。类是创建对象的模板，Java中的类可能包含下面五个组件：  字段 方法 构造函数 静态块 实例块  字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于">
 
 
 
@@ -394,11 +394,12 @@
 <li>方法</li>
 <li>构造函数</li>
 <li>静态块</li>
-<li>实例块<br>字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于初始化类的字段。类可以拥有零个或多个静态块或实例块。<h2 id="如何声明一个类"><a href="#如何声明一个类" class="headerlink" title="如何声明一个类"></a>如何声明一个类</h2>在Java中声明一个类的语法如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;modifiers&gt;&gt; <span class="class"><span class="keyword">class</span> &lt;&lt;<span class="title">class</span> <span class="title">name</span>&gt;&gt; </span>&#123;</div><div class="line">        <span class="comment">// Body of the class goes here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>实例块</li>
 </ol>
-<p>类声明可能有零个或多个修饰符。关键字<code>class</code>用于声明一个类。<code>&lt;&lt; class name &gt;&gt;</code>是用户定义的类名，它应该是一个有效的标识符。每个类都有一个主体，它在一对大括号<code>({})</code>中指定。类的主体包含其不同的组件，例如字段，方法等。<br>下面是类声明的一个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Main.java filename</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="comment">// Empty body for now; Write you own</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>字段和方法也称为类的成员，剩下的3个组件用于初始化类，即使用类模板创建对象。构造函数用于创建类的对象，类必须至少有一个构造函数（如果没有明确声明，JVM会注册一个默认的构造函数）。静态块和实例块用于初始化类的字段。类可以拥有零个或多个静态块或实例块。</p>
+<h2 id="如何声明一个类"><a href="#如何声明一个类" class="headerlink" title="如何声明一个类"></a>如何声明一个类</h2><p>在Java中声明一个类的语法如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;modifiers&gt;&gt; <span class="class"><span class="keyword">class</span> &lt;&lt;<span class="title">class</span> <span class="title">name</span>&gt;&gt; </span>&#123;</div><div class="line">        <span class="comment">// Body of the class goes here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
+<p>类声明可能有零个或多个修饰符。关键字<code>class</code>用于声明一个类。<code>&lt;&lt; class name &gt;&gt;</code>是用户定义的类名，它应该是一个有效的标识符。每个类都有一个主体，它在一对大括号<code>({})</code>中指定。类的主体包含其不同的组件，例如字段，方法等。<br>下面是类声明的一个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Main.java filename</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="comment">// Empty body for now; Write you own</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="如何声明一个类中的字段"><a href="#如何声明一个类中的字段" class="headerlink" title="如何声明一个类中的字段"></a>如何声明一个类中的字段</h2><p>类的字段表示该类的对象的属性（也称为属性）。这些字段在类的体内声明。在类中声明一个字段的一般语法是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;modifiers&gt;&gt; <span class="class"><span class="keyword">class</span> &lt;&lt;<span class="title">class</span> <span class="title">name</span>&gt;&gt; </span>&#123;</div><div class="line">        <span class="comment">// A field declaration</span></div><div class="line">        &lt;&lt;modifiers&gt;&gt; &lt;&lt;data type&gt;&gt; &lt;&lt;field name&gt;&gt; = &lt;&lt;initial value&gt;&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>以人为例，假设每个人都有两个属性：一个名字和一个性别。类应包括两个字段的声明：一个表示名称，一个表示性别。所以声明的字段将如下所示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Human.java</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span> </span>&#123;</div><div class="line">        String name;</div><div class="line">        String gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="创建类的实例"><a href="#创建类的实例" class="headerlink" title="创建类的实例"></a>创建类的实例</h2><p>以下是创建类的实例的一般语法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;Class&gt;&gt; &lt;&lt;variable&gt;&gt; = <span class="keyword">new</span> &lt;&lt;Call to Class Constructor&gt;&gt;;</div><div class="line"><span class="comment">//e.g.</span></div><div class="line">Human h = <span class="keyword">new</span> Human();</div></pre></td></tr></table></figure></p>
