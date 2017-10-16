@@ -697,8 +697,7 @@
 
       
         
-          
-            <p>类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。<br>类是创建对象的模板，Java中的类可能包含下面五个组件：</p>
+          <p>类是面向对象范式编程中的基本单元。本文向你展示了在编写Java类时，将需要了解的一些基本但重要的内容。<br>类是创建对象的模板，Java中的类可能包含下面五个组件：</p>
 <ol>
 <li>字段</li>
 <li>方法</li>
@@ -708,22 +707,13 @@
 </li>
 </ol>
 <p>类声明可能有零个或多个修饰符。关键字<code>class</code>用于声明一个类。<code>&lt;&lt; class name &gt;&gt;</code>是用户定义的类名，它应该是一个有效的标识符。每个类都有一个主体，它在一对大括号<code>({})</code>中指定。类的主体包含其不同的组件，例如字段，方法等。<br>下面是类声明的一个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Main.java filename</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="comment">// Empty body for now; Write you own</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="如何声明一个类中的字段"><a href="#如何声明一个类中的字段" class="headerlink" title="如何声明一个类中的字段"></a>如何声明一个类中的字段</h2><p>类的字段表示该类的对象的属性（也称为属性）。这些字段在类的体内声明。在类中声明一个字段的一般语法是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;modifiers&gt;&gt; <span class="class"><span class="keyword">class</span> &lt;&lt;<span class="title">class</span> <span class="title">name</span>&gt;&gt; </span>&#123;</div><div class="line">        <span class="comment">// A field declaration</span></div><div class="line">        &lt;&lt;modifiers&gt;&gt; &lt;&lt;data type&gt;&gt; &lt;&lt;field name&gt;&gt; = &lt;&lt;initial value&gt;&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>以人为例，假设每个人都有两个属性：一个名字和一个性别。类应包括两个字段的声明：一个表示名称，一个表示性别。所以声明的字段将如下所示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Human.java</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span> </span>&#123;</div><div class="line">        String name;</div><div class="line">        String gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="创建类的实例"><a href="#创建类的实例" class="headerlink" title="创建类的实例"></a>创建类的实例</h2><p>以下是创建类的实例的一般语法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;Class&gt;&gt; &lt;&lt;variable&gt;&gt; = <span class="keyword">new</span> &lt;&lt;Call to Class Constructor&gt;&gt;;</div><div class="line"><span class="comment">//e.g.</span></div><div class="line">Human h = <span class="keyword">new</span> Human();</div></pre></td></tr></table></figure></p>
-<p>当您没有显示添加构造函数时，Java编译器为您添加一个。由Java编译器添加的构造函数称为默认构造函数。默认构造函数不接受参数。类的构造函数的名称与类名称相同。<code>new</code>运算符后跟一个调用实例正在创建的类的构造函数。<code>new</code>运算符通过在堆上分配内存来创建类的实例。</p>
-<h2 id="Java中的null引用类型"><a href="#Java中的null引用类型" class="headerlink" title="Java中的null引用类型"></a>Java中的<code>null</code>引用类型</h2><p>Java有一个特殊的引用类型，称为null类型。 它没有名字，您无法定义<code>null</code>引用类型的变量。 <code>null</code>引用类型只有一个由Java定义的值，它是空文本， 它只是空。 空引用类型是与任何其他引用类型兼容的赋值。 也就是说，您可以为任何引用类型的变量分配一个空值。 实际上，存储在引用类型变量中的空值意味着引用变量是指没有对象。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Assign null value to john</span></div><div class="line">Human john = <span class="keyword">null</span>;  <span class="comment">// john is not referring to any object</span></div><div class="line">john = <span class="keyword">new</span> Human(); <span class="comment">// Now, john is referring to a valid Human object</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>请注意，null是null类型的文字。您不能将null分配给原始类型变量，这就是为什么java编译器不允许将原始值与空值进行比较的原因。</p>
-</blockquote>
-<h2 id="构造函数（Constructors）"><a href="#构造函数（Constructors）" class="headerlink" title="构造函数（Constructors）"></a>构造函数（Constructors）</h2><p>构造函数是一个命名的代码块，用于在对象创建后立即初始化类的对象。构造函数声明的一般语法是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;Modifiers&gt;&gt; &lt;&lt;Constructor Name&gt;&gt;(&lt;&lt;parameters list&gt;&gt;) <span class="keyword">throws</span> &lt;&lt;Exceptions list&gt;&gt; &#123;</div><div class="line">        <span class="comment">// Body of constructor goes here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>构造函数可以将其访问修饰符设置为public，private，protected或package-level（无修饰符）。构造函数名称与类的名称相同。构造函数名称后面是一对括号，可以包括参数。可选地，右括号后面可以是关键字throws，后面是逗号分隔的异常列表。<br>与方法不同，构造函数不具有返回类型。你甚至不能将void指定为构造函数的返回类型。如果有任何返回类型，那么它是方法。请记住，如果构造的名称与类的简单名称相同，则可以是方法或构造函数。如果它指定一个返回类型，它是一种方法。如果没有指定返回类型，它是一个构造函数。</p>
-<h2 id="实例块"><a href="#实例块" class="headerlink" title="实例块"></a>实例块</h2><p>你看到一个构造函数用于初始化一个类的实例。实例块（也称为实例初始化程序）也用于初始化类的对象。一个实例块只是一个类的一个代码块，但在任何方法或构造函数之外。实例初始化程序没有名称。它的代码简单地放在一个一对大括号内。<br>请注意，实例初始化程序在实例上下文中执行，关键字在实例初始化程序中可用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// An instance initializer</span></div><div class="line">&#123;</div><div class="line">        <span class="comment">/* Other code for the instance initializer goes here */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>一个实例块不能有一个返回语句。它不能抛出检查异常，除非所有声明的构造函数在其throws子句中列出这些检查的异常。</p>
-<p>##静态块<br>静态块也称为静态初始化程序。它类似于实例块。它用于初始化一个类。每个对象执行一次实例初始化程序，而当类定义加载到JVM中时，静态初始化程序只对类执行一次。为了将其与实例初始化程序区分开，您需要在其声明开头使用static关键字。<br>你可以在一个类中有多个静态块。所有的静态初块都按照出现的文本顺序执行，并在任何实例初始化器之前执行。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// An static initializer</span></div><div class="line"><span class="keyword">static</span> &#123;</div><div class="line">        <span class="comment">/* Other code for the static initializer goes here */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>一个静态块能抛出被检查的异常，它不能有一个返回语句。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/27/2 How to create a class in Java/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
