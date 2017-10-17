@@ -605,6 +605,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://limaomei1986.github.io/2016/10/26/从MVC到前后端分离/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morten">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Morten's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/26/从MVC到前后端分离/" itemprop="url">从MVC到前后端分离</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-26T20:29:05+08:00">
+                2016-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/架构之路/" itemprop="url" rel="index">
+                    <span itemprop="name">架构之路</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><strong>摘要</strong>：MVC模式早在上个世纪70年代就诞生了，直到今天它依然存在，可见生命力相当之强。MVC模式最早用于Smalltalk语言中，最后在其它许多开发语言中都得到了很好的应用，例如，Java中的Struts、Spring MVC等框架。</p>
+</blockquote>
+<h2 id="理解MVC"><a href="#理解MVC" class="headerlink" title="理解MVC"></a>理解MVC</h2><p>MVC是一种经典的设计模式，全名为Model-View-Controller，即模型-视图-控制器。</p>
+<p>其中，模型是用于封装数据的载体，例如，在Java中一般通过一个简单的POJO（Plain Ordinary Java Object）来表示，其本质是一个普通的Java Bean，包含一系列的成员变量及其getter/setter方法。对于视图而言，它更加偏重于展现，也就是说，视图决定了界面到底长什么样子，在Java中可通过JSP来充当视图，或者通过纯HTML的方式进行展现，而后者才是目前的主流。模型和视图需要通过控制器来进行粘合，例如，用户发送一个HTTP请求，此时该请求首先会进入控制器，然后控制器去获取数据并将其封装为模型，最后将模型传递到视图中进行展现。</p>
+<p>综上所述，MVC的交互过程如图1所示：<br>[<img src="http://img.ptcms.csdn.net/article/201510/21/56275703bfc42_middle.jpg" alt="">]</p>
+<h2 id="MVC模式的优点与不足"><a href="#MVC模式的优点与不足" class="headerlink" title="MVC模式的优点与不足"></a>MVC模式的优点与不足</h2><p>MVC模式早在上个世纪70年代就诞生了，直到今天它依然存在，可见生命力相当之强。MVC模式最早用于Smalltalk语言中，最后在其它许多开发语言中都得到了很好的应用，例如，Java中的Struts、Spring MVC等框架。正是因为这些MVC框架的出现，才让MVC模式真正落地，让开发更加高效，让代码耦合度尽量减小，让应用程序各部分的职责更加清晰。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/26/从MVC到前后端分离/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://limaomei1986.github.io/2016/02/27/2 How to create a class in Java/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -942,7 +1094,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -953,7 +1105,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -964,7 +1116,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
