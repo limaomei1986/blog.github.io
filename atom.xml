@@ -75,6 +75,35 @@
   </entry>
   
   <entry>
+    <title>类的复用</title>
+    <link href="https://limaomei1986.github.io/2017/09/27/%E7%B1%BB%E7%9A%84%E5%A4%8D%E7%94%A8/"/>
+    <id>https://limaomei1986.github.io/2017/09/27/类的复用/</id>
+    <published>2017-09-27T05:29:05.000Z</published>
+    <updated>2017-11-01T06:34:54.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;代码的复用是编程过程中要实现的重要功能，它可以让我们不必重头开始编写代码。在Java中可以通过&lt;code&gt;组合&lt;/code&gt;和&lt;code&gt;继承&lt;/code&gt;来实现类的复用&lt;/p&gt;
+&lt;h1 id=&quot;组合&quot;&gt;&lt;a href=&quot;#组合&quot; class=&quot;headerlink&quot; title=&quot;组合&quot;&gt;&lt;/a&gt;组合&lt;/h1&gt;&lt;p&gt;要使用组合值需要将对象引用置于新类中即可。这里涉及到组合对象的初始化问题，我们可以在声明对象的同时进行初始化，也可以在构造函数进行初始化、还可以在实例块中进行初始化，或者在对象正要使用之前初始化（惰性初始化）。&lt;br&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
+    
+      <category term="面相对对象" scheme="https://limaomei1986.github.io/tags/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从MVC到前后端分离</title>
     <link href="https://limaomei1986.github.io/2016/10/26/%E4%BB%8EMVC%E5%88%B0%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/"/>
     <id>https://limaomei1986.github.io/2016/10/26/从MVC到前后端分离/</id>
