@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://limaomei1986.github.io/"/>
-  <updated>2017-11-02T14:31:10.000Z</updated>
+  <updated>2017-11-02T14:36:58.613Z</updated>
   <id>https://limaomei1986.github.io/</id>
   
   <author>
@@ -21,17 +21,25 @@
     <link href="https://limaomei1986.github.io/2017/11/02/TCP%E5%8D%8F%E8%AE%AE/"/>
     <id>https://limaomei1986.github.io/2017/11/02/TCP协议/</id>
     <published>2017-11-02T05:29:05.000Z</published>
-    <updated>2017-11-02T14:31:10.000Z</updated>
+    <updated>2017-11-02T14:36:58.613Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot;&gt;&lt;a href=&quot;#TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot;&gt;&lt;a href=&quot;#TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot; class=&quot;headerlink&quot; title=&quot;TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot;&gt;&lt;/a&gt;TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;建立连接协议（三次握手）&lt;ol&gt;
+&lt;li&gt;客户端发送一个带SYN标志的TCP报文到服务器，这是三次握手过程中的报文1。&lt;/li&gt;
+&lt;li&gt;服务器端回应客户端的，这是三次握手中的第2个报文，这个报文同时带ACK标志和SYN标志，因此它表示对刚才客户端SYN报文的回应，同时又标志SYN给客户端，询问客户端是否准备好进行数据通讯&lt;/li&gt;
+&lt;li&gt;客户必须再次回应服务段一个ACK报文，这是第3段报文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;关闭连接协议（四次挥手）：由于TCP连接是全双工的，因此每个方向都必须单独进行关闭。这原则是当一方完成它的数据发送任务后就能发送一个FIN来终止这个方向的连接。收到一个 FIN只意味着这一方向上没有数据流动，一个TCP连接在收到一个FIN后仍能发送数据。首先进行关闭的一方将执行主动关闭，而另一方执行被动关闭&lt;ol&gt;
+&lt;li&gt;TCP客户端发送一个FIN，用来关闭客户到服务器的数据传送（报文段4）&lt;/li&gt;
+&lt;li&gt;服务器收到这个FIN，它发回一个ACK，确认序号为收到的序号加1（报文段5）&lt;/li&gt;
+&lt;li&gt;服务器关闭客户端的连接，发送一个FIN给客户端（报文段6）&lt;/li&gt;
+&lt;li&gt;客户段发回ACK报文确认，并将确认序号设置为收到序号加1（报文段7）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -77,35 +85,6 @@
   </entry>
   
   <entry>
-    <title>类的复用</title>
-    <link href="https://limaomei1986.github.io/2017/09/27/%E7%B1%BB%E7%9A%84%E5%A4%8D%E7%94%A8/"/>
-    <id>https://limaomei1986.github.io/2017/09/27/类的复用/</id>
-    <published>2017-09-27T05:29:05.000Z</published>
-    <updated>2017-11-01T06:34:54.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;代码的复用是编程过程中要实现的重要功能，它可以让我们不必重头开始编写代码。在Java中可以通过&lt;code&gt;组合&lt;/code&gt;和&lt;code&gt;继承&lt;/code&gt;来实现类的复用&lt;/p&gt;
-&lt;h1 id=&quot;组合&quot;&gt;&lt;a href=&quot;#组合&quot; class=&quot;headerlink&quot; title=&quot;组合&quot;&gt;&lt;/a&gt;组合&lt;/h1&gt;&lt;p&gt;要使用组合值需要将对象引用置于新类中即可。这里涉及到组合对象的初始化问题，我们可以在声明对象的同时进行初始化，也可以在构造函数进行初始化、还可以在实例块中进行初始化，或者在对象正要使用之前初始化（惰性初始化）。&lt;br&gt;&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
-    
-    
-      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
-    
-      <category term="面相对对象" scheme="https://limaomei1986.github.io/tags/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java并发之CountDownLatch、CyclicBarrier和Semaphore</title>
     <link href="https://limaomei1986.github.io/2017/09/27/Java%E5%B9%B6%E5%8F%91%E4%B9%8BCountDownLatch%E3%80%81CyclicBarrier%E5%92%8CSemaphore/"/>
     <id>https://limaomei1986.github.io/2017/09/27/Java并发之CountDownLatch、CyclicBarrier和Semaphore/</id>
@@ -128,6 +107,29 @@
       <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
     
       <category term="多线程" scheme="https://limaomei1986.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>类的复用</title>
+    <link href="https://limaomei1986.github.io/2017/09/27/%E7%B1%BB%E7%9A%84%E5%A4%8D%E7%94%A8/"/>
+    <id>https://limaomei1986.github.io/2017/09/27/类的复用/</id>
+    <published>2017-09-27T05:29:05.000Z</published>
+    <updated>2017-11-02T14:37:40.467Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;代码的复用是编程过程中要实现的重要功能，它可以让我们不必重头开始编写代码。在Java中可以通过&lt;code&gt;组合&lt;/code&gt;和&lt;code&gt;继承&lt;/code&gt;来实现类的复用&lt;/p&gt;
+&lt;h1 id=&quot;组合&quot;&gt;&lt;a href=&quot;#组合&quot; class=&quot;headerlink&quot; title=&quot;组合&quot;&gt;&lt;/a&gt;组合&lt;/h1&gt;&lt;p&gt;要使用组合值需要将对象引用置于新类中即可。这里涉及到组合对象的初始化问题，我们可以在声明对象的同时进行初始化，也可以在构造函数进行初始化、还可以在实例块中进行初始化，或者在对象正要使用之前初始化（惰性初始化）。&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; reusing;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; net.mindview.util.Print.*;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Soap&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; String s;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Soap&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		print(&lt;span class=&quot;string&quot;&gt;&quot;Soap()&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		s = &lt;span class=&quot;string&quot;&gt;&quot;Constructed&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; s;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Bath&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; String s1 = &lt;span class=&quot;string&quot;&gt;&quot;Happy&quot;&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;// 1.在定义处初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			s2 = &lt;span class=&quot;string&quot;&gt;&quot;Happy&quot;&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;// 1.在定义处初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			s3, s4;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; Soap castille;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; toy;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 2.构造函数中初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Bath&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		print(&lt;span class=&quot;string&quot;&gt;&quot;Inside Bath()&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		s3 = &lt;span class=&quot;string&quot;&gt;&quot;Toy&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		toy = &lt;span class=&quot;number&quot;&gt;3.14f&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		castille = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Soap();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 3.实例块中初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		i = &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 4.惰性初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (s4 == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			s4 = &lt;span class=&quot;string&quot;&gt;&quot;Job&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Bath [s1=&quot;&lt;/span&gt; + s1 + &lt;span class=&quot;string&quot;&gt;&quot;, s2=&quot;&lt;/span&gt; + s2 + &lt;span class=&quot;string&quot;&gt;&quot;, s3=&quot;&lt;/span&gt; + s3 + &lt;span class=&quot;string&quot;&gt;&quot;, s4=&quot;&lt;/span&gt; + s4 + &lt;span class=&quot;string&quot;&gt;&quot;, castille=&quot;&lt;/span&gt; + castille + &lt;span class=&quot;string&quot;&gt;&quot;, i=&quot;&lt;/span&gt; + i&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;				+ &lt;span class=&quot;string&quot;&gt;&quot;, toy=&quot;&lt;/span&gt; + toy + &lt;span class=&quot;string&quot;&gt;&quot;]&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		Bath bath = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Bath();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		print(bath);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
+    
+      <category term="面相对对象" scheme="https://limaomei1986.github.io/tags/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
