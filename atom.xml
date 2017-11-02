@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://limaomei1986.github.io/"/>
-  <updated>2017-09-28T02:13:48.000Z</updated>
+  <updated>2017-11-02T14:31:10.000Z</updated>
   <id>https://limaomei1986.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TCP/IP协议</title>
+    <link href="https://limaomei1986.github.io/2017/11/02/TCP%E5%8D%8F%E8%AE%AE/"/>
+    <id>https://limaomei1986.github.io/2017/11/02/TCP协议/</id>
+    <published>2017-11-02T05:29:05.000Z</published>
+    <updated>2017-11-02T14:31:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot;&gt;&lt;a href=&quot;#TCP建立连接的三次握手过程，以及关闭连接的四次挥手过程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="计算机基础" scheme="https://limaomei1986.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="TCP/IP" scheme="https://limaomei1986.github.io/tags/TCP-IP/"/>
+    
+      <category term="网络" scheme="https://limaomei1986.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Java并发 - CountDownLatch示例</title>
@@ -36,32 +64,6 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;CountDownLatch是什么&quot;&gt;&lt;a href=&quot;#CountDownLatch是什么&quot; class=&quot;headerlink&quot; title=&quot;CountDownLatch是什么&quot;&gt;&lt;/a&gt;CountDownLatch是什么&lt;/h2&gt;&lt;p&gt;CountDownLatch是在Java1.5被引入的，跟它一起被引入的并发工具类还有CyclicBarrier、Semaphore、ConcurrentHashMap和BlockingQueue，它们都存在于java.util.concurrent包下。CountDownLatch这个类能够使一个线程等待其他线程完成各自的工作后再执行。例如，应用程序的主线程希望在负责启动框架服务的线程已经启动所有的框架服务之后再执行。&lt;br&gt;CountDownLatch是通过一个计数器来实现的，计数器的初始值为线程的数量。每当一个线程完成了自己的任务后，计数器的值就会减1。当计数器值到达0时，它表示所有的线程已经完成了任务，&amp;gt;然后在闭锁上等待的线程就可以恢复执行任务。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
-    
-    
-      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
-    
-      <category term="多线程" scheme="https://limaomei1986.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发之CountDownLatch、CyclicBarrier和Semaphore</title>
-    <link href="https://limaomei1986.github.io/2017/09/27/Java%E5%B9%B6%E5%8F%91%E4%B9%8BCountDownLatch%E3%80%81CyclicBarrier%E5%92%8CSemaphore/"/>
-    <id>https://limaomei1986.github.io/2017/09/27/Java并发之CountDownLatch、CyclicBarrier和Semaphore/</id>
-    <published>2017-09-27T05:29:05.000Z</published>
-    <updated>2017-09-28T02:52:03.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）&lt;/p&gt;
-&lt;h2 id=&quot;CountDownLatch&quot;&gt;&lt;a href=&quot;#CountDownLatch&quot; class=&quot;headerlink&quot; title=&quot;CountDownLatch&quot;&gt;&lt;/a&gt;CountDownLatch&lt;/h2&gt;&lt;p&gt;直译过来就是倒计数(CountDown)门闩(Latch)。倒计数不用说，门闩的意思顾名思义就是阻止前进。在这里就是指 CountDownLatch.await() 方法在倒计数为0之前会阻塞当前线程。&lt;/p&gt;
-&lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;CountDownLatch 的作用和 Thread.join() 方法类似，可用于一组线程和另外一组线程的协作。例如，主线程在做一项工作之前需要一系列的准备工作，只有这些准备工作都完成，主线程才能继续它的工作。这些准备工作彼此独立，所以可以并发执行以提高速度。在这个场景下就可以使用 CountDownLatch 协调线程之间的调度了。在直接创建线程的年代（Java 5.0 之前），我们可以使用 Thread.join()。在 JUC 出现后，因为线程池中的线程不能直接被引用，所以就必须使用 CountDownLatch 了。&lt;br&gt;
     
     </summary>
     
@@ -100,6 +102,32 @@
       <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
     
       <category term="面相对对象" scheme="https://limaomei1986.github.io/tags/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发之CountDownLatch、CyclicBarrier和Semaphore</title>
+    <link href="https://limaomei1986.github.io/2017/09/27/Java%E5%B9%B6%E5%8F%91%E4%B9%8BCountDownLatch%E3%80%81CyclicBarrier%E5%92%8CSemaphore/"/>
+    <id>https://limaomei1986.github.io/2017/09/27/Java并发之CountDownLatch、CyclicBarrier和Semaphore/</id>
+    <published>2017-09-27T05:29:05.000Z</published>
+    <updated>2017-09-28T02:52:03.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CountDownLatch 是能使一组线程等另一组线程都跑完了再继续跑；CyclicBarrier 能够使一组线程在一个时间点上达到同步，可以是一起开始执行全部任务或者一部分任务。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;这次说一下 JUC 中的同步器三个主要的成员：CountDownLatch、CyclicBarrier 和 Semaphore（不知道有没有初学者觉得这三个的名字不太好记）。这三个是 JUC 中较为常用的同步器，通过它们可以方便地实现很多线程之间协作的功能。（下面的代码出自 JDK 文档）&lt;/p&gt;
+&lt;h2 id=&quot;CountDownLatch&quot;&gt;&lt;a href=&quot;#CountDownLatch&quot; class=&quot;headerlink&quot; title=&quot;CountDownLatch&quot;&gt;&lt;/a&gt;CountDownLatch&lt;/h2&gt;&lt;p&gt;直译过来就是倒计数(CountDown)门闩(Latch)。倒计数不用说，门闩的意思顾名思义就是阻止前进。在这里就是指 CountDownLatch.await() 方法在倒计数为0之前会阻塞当前线程。&lt;/p&gt;
+&lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;CountDownLatch 的作用和 Thread.join() 方法类似，可用于一组线程和另外一组线程的协作。例如，主线程在做一项工作之前需要一系列的准备工作，只有这些准备工作都完成，主线程才能继续它的工作。这些准备工作彼此独立，所以可以并发执行以提高速度。在这个场景下就可以使用 CountDownLatch 协调线程之间的调度了。在直接创建线程的年代（Java 5.0 之前），我们可以使用 Thread.join()。在 JUC 出现后，因为线程池中的线程不能直接被引用，所以就必须使用 CountDownLatch 了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Core Java" scheme="https://limaomei1986.github.io/categories/Core-Java/"/>
+    
+    
+      <category term="Java" scheme="https://limaomei1986.github.io/tags/Java/"/>
+    
+      <category term="多线程" scheme="https://limaomei1986.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
